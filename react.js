@@ -5,15 +5,15 @@ module.exports = {
     jest: true,
   },
   extends: [
+    'standard',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:n/recommended',
-    'airbnb',
-    'airbnb/hooks',
     'plugin:import/recommended',
     'plugin:promise/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:unicorn/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
