@@ -63,7 +63,7 @@ module.exports = {
       {
         newlinesBetween: 'always',
         groups: [
-          ['/^next/', '/^react/'],
+          ['/^react/'],
           ['module'],
           ['/^~//', '/^@//'],
           ['parent', 'sibling', 'index']
