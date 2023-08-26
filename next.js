@@ -5,9 +5,11 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'standard',
+    'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:promise/recommended',
+    'plugin:n/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,7 +21,8 @@ module.exports = {
   },
   plugins: [
     'jsx-a11y',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'eslint-plugin-import-helpers'
   ],
   rules: {
     'prettier/prettier': ["error", {
@@ -44,6 +47,19 @@ module.exports = {
     'jsx-a11y/role-has-required-aria-props': 'warn',
     'jsx-a11y/role-supports-aria-props': 'warn',
     'react/no-unknown-property': 'error',
+    'import-helpers/order-imports': [
+      'error',
+      {
+        newlinesBetween: 'always',
+        groups: [
+          ['/^next/', '/^react/'],
+          ['module'],
+          ['/^~//', '/^@//'],
+          ['parent', 'sibling', 'index']
+        ],
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
   },
   settings: {
     react: {
