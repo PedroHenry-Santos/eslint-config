@@ -1,12 +1,12 @@
 {
-  "name": "@pedro/eslint-config",
-  "version": "2.1.0",
+  "name": "@pedrohenry-santos/eslint-config",
+  "version": "1.0.1",
   "private": false,
   "description": "ESLint configuration used by Pedro.",
   "main": "index.js",
   "license": "MIT",
   "repository": {
-    "url": "PedroHenry-Santos/eslint-config"
+    "url": "git+https://github.com/PedroHenry-Santos/eslint-config.git"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
@@ -31,5 +31,18 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^3.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/PedroHenry-Santos/eslint-config/issues"
+  },
+  "homepage": "https://github.com/PedroHenry-Santos/eslint-config#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "pedrohenry-santos",
+    "url": "https://github.com/PedroHenry-Santos"
   }
 }

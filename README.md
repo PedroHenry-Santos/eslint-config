@@ -1,4 +1,4 @@
-# Rocketseat ESLint config
+# Pedro ESLint config
 
 ## Whats included?
 
@@ -13,14 +13,17 @@
 ### React (with Next.js)
 
 Install dependencies:
+
 ```
-npm i -D eslint @rocketseat/eslint-config
+npm i -D eslint @pedrohenry-santos/eslint-config
 ```
+
 Inside `.eslintrc.json`
+
 ```
 {
   "extends": [
-    "@rocketseat/eslint-config/next", 
+    "@pedrohenry-santos/eslint-config/next", 
     "next/core-web-vitals"
   ]
 }
@@ -29,25 +32,31 @@ Inside `.eslintrc.json`
 ### React (without Next.js)
 
 Install dependencies:
+
 ```
-npm i -D eslint @rocketseat/eslint-config
+npm i -D eslint @pedrohenry-santos/eslint-config
 ```
+
 Inside `.eslintrc.json`
+
 ```
 {
-  "extends": "@rocketseat/eslint-config/react"
+  "extends": "@pedrohenry-santos/eslint-config/react"
 }
 ```
 
 ### Node.js
 
 Install dependencies:
+
 ```
-npm i -D eslint @rocketseat/eslint-config
+npm i -D eslint @pedrohenry-santos/eslint-config
 ```
+
 Inside `.eslintrc.json`
+
 ```
 {
-  "extends": "@rocketseat/eslint-config/node"
+  "extends": "@pedrohenry-santos/eslint-config/node"
 }
 ```
