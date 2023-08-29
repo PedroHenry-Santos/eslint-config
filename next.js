@@ -55,6 +55,7 @@ module.exports = {
         groups: [
           ['/^next/', '/^react/'],
           ['module'],
+          ['/^@.*\\/__mocks__/'],
           ['/^~//', '/^@//'],
           ['parent', 'sibling', 'index']
         ],
