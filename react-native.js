@@ -1,21 +1,25 @@
 module.exports = {
+  env: {
+    es2024: true,
+    jest: true,
+  },
   extends: [
-    "universe",
+    "universe/native",
     "universe/shared/typescript-analysis",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:promise/recommended",
     "plugin:prettier/recommended",
     "plugin:unicorn/recommended",
+    "plugin:@tanstack/query/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["eslint-plugin-import-helpers"],
+  plugins: ["react", "jsx-a11y", "simple-import-sort"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -29,21 +33,25 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
-    "no-console": "error",
-    "import-helpers/order-imports": [
-      "error",
+    "react/self-closing-comp": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-unknown-property": "error",
+    "jsx-a11y/alt-text": [
+      "warn",
       {
-        newlinesBetween: "always",
-        groups: [
-          ["/^react-native/"],
-          ["module"],
-          ["/^@.*\\/__mocks__/"],
-          ["/^~//", "/^@//"],
-          ["parent", "sibling", "index"],
-        ],
-        alphabetize: { order: "asc", ignoreCase: true },
+        elements: ["img"],
+        img: ["Image"],
       },
     ],
+    "jsx-a11y/aria-props": "warn",
+    "jsx-a11y/aria-proptypes": "warn",
+    "jsx-a11y/aria-unsupported-elements": "warn",
+    "jsx-a11y/role-has-required-aria-props": "warn",
+    "jsx-a11y/role-supports-aria-props": "warn",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "no-console": "error",
   },
   overrides: [
     {
@@ -54,8 +62,11 @@ module.exports = {
     },
   ],
   settings: {
-    "import/resolver": {
-      typescript: {},
+    react: {
+      version: "detect",
+    },
+    "import/parsers": {
+      [require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
     },
   },
   globals: {

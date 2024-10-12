@@ -1,19 +1,15 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2024: true,
     jest: true,
   },
   extends: [
     'standard',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:n/recommended',
-    'plugin:import/recommended',
-    'plugin:promise/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'plugin:unicorn/recommended',
+    'plugin:prettier/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -24,10 +20,11 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'promise',
+    'unicorn',
     'react',
     'jsx-a11y',
-    '@typescript-eslint',
-    'eslint-plugin-import-helpers',
+    '@typescript-eslint'
   ],
   rules: {
     'react/self-closing-comp': 'error',
@@ -57,21 +54,7 @@ module.exports = {
     'jsx-a11y/aria-unsupported-elements': 'warn',
     'jsx-a11y/role-has-required-aria-props': 'warn',
     'jsx-a11y/role-supports-aria-props': 'warn',
-    'react/no-unknown-property': 'error',
-    'import-helpers/order-imports': [
-      'error',
-      {
-        newlinesBetween: 'always',
-        groups: [
-          ['/^react/'],
-          ['module'],
-          ['/^@.*\\/__mocks__/'],
-          ['/^~//', '/^@//'],
-          ['parent', 'sibling', 'index']
-        ],
-        alphabetize: { order: 'asc', ignoreCase: true },
-      },
-    ],
+    'react/no-unknown-property': 'error'
   },
   settings: {
     react: {
